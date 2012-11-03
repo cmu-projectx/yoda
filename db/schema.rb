@@ -11,11 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20121103083232) do
-=======
 ActiveRecord::Schema.define(:version => 20121103151750) do
->>>>>>> 2a7fbbfe9bfc0ae91d20e2832e0fa1a148ae5952
 
   create_table "messages", :force => true do |t|
     t.string   "sender"
@@ -26,15 +22,4 @@ ActiveRecord::Schema.define(:version => 20121103151750) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
-
-  create_table "users", :force => true do |t|
-    t.string   "mobile"
-    t.float    "longitude"
-    t.float    "latitude"
-    t.string   "address"
-    t.boolean  "gmaps"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
 end
