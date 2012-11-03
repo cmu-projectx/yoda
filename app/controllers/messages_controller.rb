@@ -42,8 +42,7 @@ class MessagesController < ApplicationController
   def create
     require 'json'
 
-    hash = JSON.parse params[:body]
-    @message = Message.new({sender:"#{params[:sender]}", subject:"#{params[:subject]}", to:"#{params[:to]}", date:"#{params[:date]}", body:"#{hash[:p]}" })
+    @message = Message.new({sender:"#{params[:sender]}", subject:"#{params[:subject]}", to:"#{params[:to]}", date:"#{params[:date]}", body:"#{(JSON.parse params[:body])}" })
 
     respond_to do |format|
       if @message.save
