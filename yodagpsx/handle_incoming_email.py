@@ -15,7 +15,7 @@ class WebHook(InboundMailHandler):
         body = list(mail_message.bodies(content_type='text/plain'))[0]
         logging.info("Body of message: " + body[1].decode())
         
-        url = "http://whispering-peak-9704.herokuapp.com/messages.json"
+        url = "http://thawing-retreat-8701.herokuapp.com/messages.json"
         form_fields = {
             "sender": mail_message.sender,
             "subject": mail_message.subject,
